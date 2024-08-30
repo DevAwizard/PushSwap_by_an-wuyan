@@ -1,7 +1,7 @@
 # pushswap_by_an-wuyan
 
 
-![Uploading Flowchart_pushswap.png…]()
+![Flowchart](https://raw.githubusercontent.com/DevAwizard/PushSwap_by_an-wuyan/91fda8b96a11514f046719c066d1b939eb9318c5/Flowchart_image)
 
 
 
