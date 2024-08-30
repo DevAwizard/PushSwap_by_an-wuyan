@@ -13,24 +13,43 @@
 ### Table of Contents
 
 1. [Introduction](#introduction)
+
 2. [Objectives](#objectives)
+
 3. [Setup and Installation](#setup-and-installation)
+
    - [Cloning the Repository](#cloning-the-repository)
+
    - [Compiling the Program](#compiling-the-program)
+
 4. [Usage](#usage)
+
    - [Example Usage](#example-usage)
+
    - [Supported Operations](#supported-operations)
+
 5. [Program Workflow](#program-workflow)
+
 6. [Code structure](#code-structure)
+
 7. [Stack Operations Explained](#stack-operations-explained)
+
    - [Operation List](#operation-list)
+
 8. [Performance Testing](#performance-testing)
+
    - [Sorting Efficiency](#sorting-efficiency)
+
 9. [Error Handling](#error-handling)
+
 10. [Memory Management](#memory-management)
+
 11. [Evaluation Checklist](#evaluation-checklist)
+
 12. [Test_cases](#Test-cases)
+
 13. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
+
 14. [License](#license)
 
 
