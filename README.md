@@ -21,20 +21,17 @@
    - [Example Usage](#example-usage)
    - [Supported Operations](#supported-operations)
 5. [Program Workflow](#program-workflow)
-   - [Flowchart Overview](#flowchart-overview)
-   - [Argument Handling](#argument-handling)
-   - [Stack Size Check](#stack-size-check)
-   - [Sorting Algorithm](#sorting-algorithm)
-6. [Stack Operations Explained](#stack-operations-explained)
+6. [Code structure](#code-structure)
+7. [Stack Operations Explained](#stack-operations-explained)
    - [Operation List](#operation-list)
-7. [Performance Testing](#performance-testing)
+8. [Performance Testing](#performance-testing)
    - [Sorting Efficiency](#sorting-efficiency)
-8. [Error Handling](#error-handling)
-9. [Memory Management](#memory-management)
-10. [Evaluation Checklist](#evaluation-checklist)
-11. [Test_cases](#Test-cases)
-12. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
-13. [License](#license)
+9. [Error Handling](#error-handling)
+10. [Memory Management](#memory-management)
+11. [Evaluation Checklist](#evaluation-checklist)
+12. [Test_cases](#Test-cases)
+13. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
+14. [License](#license)
 
 
 ## 1. Introduction
@@ -122,8 +119,50 @@ Below is a diagram that represents the pseudocodic approach of my Push_swap prog
 
 ![Flowchart](Flowchart_image/Flowchart_pushswap.png)
 
+## Code structure
 
-## 6. Stack Operations Explained
+## Project Structure
+
+```sh
+pushswap/
+├── srcs/                       # Source files of C code
+│   ├── main.c                  # Entry point of the program
+│   ├── check_arguments/        # Argument checking functionality
+│   │   ├── single_argument.c       # Handles single argument case
+│   │   ├── multiple_arguments.c    # Handles multiple arguments case
+│   │   ├── edge_cases.c            # Handles edge cases for arguments
+│   ├── errors/                # Error handling functionality
+│   │   ├── ft_error_arguments.c    # Handles argument errors
+│   │   ├── ft_error_parsing.c      # Handles parsing errors
+│   ├── parsing_validation/    # Parsing and validation functionality
+│   │   ├── process_arguments.c     # Processes and validates arguments
+│   │   ├── convert_to_int.c        # Converts arguments to integers
+│   │   ├── process_multi_argument_helper_functions.c  # Helper functions for multi-argument processing
+│   ├── stacks/                # Stack operations and sorting algorithms
+│   │   ├── pushswap.c             # Main logic for push-swap operations
+│   │   ├── operations/            # Basic stack operations
+│   │   │   ├── push.c                 # Push operation
+│   │   │   ├── swap.c                 # Swap operation
+│   │   │   ├── reverse.c              # Reverse operation
+│   │   │   ├── rotate.c               # Rotate operation
+│   │   ├── turk_algorithm/       # Turk algorithm for sorting
+│   │   │   ├── find_min_max_value.c    # Finds minimum and maximum values
+│   │   │   ├── sorting_small_stack.c   # Sorts small stacks
+│   │   │   ├── utils.c                 # Utility functions for the algorithm
+│   │   │   ├── sort_bigger.c           # Sorting larger stacks
+│   │   │   ├── set_stacks.c            # Sets up the stacks for sorting
+│   │   │   ├── sorting_loop.c          # Main sorting loop
+│   │   │   ├── other_functions.c       # Additional functions for sorting
+│   │   │   ├── calculate_move_cost.c   # Calculates the cost of moves
+│   ├── free_memory/           # Memory management
+│   │   ├── free_array.c           # Frees allocated arrays
+│   │   ├── free_stacks.c          # Frees allocated stacks
+│   ├── libft/                # Libft functions (external library)
+│       ├── libft.a           # Compiled Libft library
+├── obj/                      # Object files generated from the source files
+└── Makefile                  # Makefile to compile the project
+```
+## 7. Stack Operations Explained
 
 ### Operation List
 
@@ -141,7 +180,7 @@ Each stack operation plays a crucial role in the sorting process. Below is a det
 - **rrb (reverse rotate b):** Shifts all elements of stack B down by one position.
 - **rrr (reverse rotate both):** Performs `rra` and `rrb` simultaneously.
 
-## 7. Performance Testing
+## 8. Performance Testing
 
 ### Sorting Efficiency
 
@@ -152,7 +191,7 @@ To ensure your implementation is efficient, run performance tests with various i
 
 These benchmarks help ensure that your sorting algorithm is optimized and efficient.
 
-## 8. Error Handling
+## 9. Error Handling
 
 Your Push_swap program should handle errors gracefully. Some common errors include:
 
@@ -162,7 +201,7 @@ Your Push_swap program should handle errors gracefully. Some common errors inclu
 
 Handling these errors ensures the robustness of your program.
 
-## 9. Memory Management
+## 10. Memory Management
 
 Memory management is critical in C programming. Your Push_swap program must:
 
@@ -193,7 +232,7 @@ HEAP SUMMARY:
 
 - Tools: You can use tools like **`Valgrind`** to check for memory leaks during testing.
 
-## 10. Evaluation Checklist
+## 12. Evaluation Checklist
 
 During the evaluation of your Push_swap project, an executable called `checker_linux` will be used to verify the correctness of your program. The `checker_linux` executable will check whether the output produced by your program correctly sorts the numbers and stays within the permitted number of operations.
 
@@ -302,7 +341,7 @@ Here's a list of all possible error cases for your Push_swap program that users 
     - **Example:** `./push_swap -9223372036854775808`
     - **Expected Behavior:** The program should detect that `-9223372036854775808` is less than `INT_MIN` and display `Error`.
 
-## 12. Push Swap Visualizer Setup on macOS (M1/M2/M3)
+## 13. Push Swap Visualizer Setup on macOS (M1/M2/M3)
 
 This guide will help you set up the Push Swap Visualizer for your Push Swap project on macOS with M1, M2, or M3 chips.
 
@@ -443,7 +482,7 @@ Use the visualizer’s interface to input data, set paths, and control the sorti
 
 - Configure the visualizer's interface to point to your push_swap executable and test with different inputs.
 
-## 13. License
+## 14. License
 
 This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
 
