@@ -1,8 +1,5 @@
 ![cover-push_swap](https://github.com/user-attachments/assets/263ded18-813c-4747-8a1b-6ae762b5a101)
 
-# Push swap documentation
-
-# Push swap documentation
 
 <div align="center">
 <h1>Push swap Documentation</h1>
@@ -11,7 +8,6 @@
 <img src="https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white" />
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 </div>
-
 
 
 ## Table of Contents
