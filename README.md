@@ -34,14 +34,14 @@
 14. [License](#license)
 
 
-## 1. Introduction
+### 1. Introduction
 
 The Push_swap project is a challenging algorithmic exercise that focuses on sorting data using a specific set of operations in the C programming language. The task is to write a program that sorts integers stored in a stack, using the minimum number of operations possible. 
 
 
 This project is an excellent opportunity to deepen your understanding of sorting algorithms, data structures, and efficient code practices.
 
-## 2. Objectives
+### 2. Objectives
 
 The main objectives of this project are:
 
@@ -50,9 +50,9 @@ The main objectives of this project are:
 - **Error Handling:** Create a robust program that gracefully handles all edge cases and errors, such as invalid input or memory issues.
 - **Understanding Complexity:** Gain a solid understanding of algorithmic complexity, particularly with sorting operations.
 
-## 3. Setup and Installation
+### 3. Setup and Installation
 
-### Cloning the Repository
+#### Cloning the Repository
 
 To start using the Push_swap project, first clone the repository from GitHub:
 
@@ -60,7 +60,7 @@ To start using the Push_swap project, first clone the repository from GitHub:
 git clone https://github.com/yourusername/push_swap.git
 ```
 
-### Compiling the Program
+#### Compiling the Program
 
 After cloning the repository, navigate to the project directory and compile the program using the provided Makefile:
 
@@ -71,11 +71,11 @@ make
 
 This will generate the `push_swap` executable, ready for use.
 
-## 4. Usage
+### 4. Usage
 
 The Push_swap program takes a series of integers as arguments and returns the sequence of operations required to sort them.
 
-### Example Usage
+#### Example Usage
 
 Run the following command to see Push_swap in action:
 
@@ -112,16 +112,16 @@ The program supports the following stack operations:
 - **rrb:** Reverse rotate all elements of stack B. The last element becomes the first one.
 - **rrr:** Perform `rra` and `rrb` simultaneously.
 
-## 5. My program visual Workflow
+### 5. My program visual Workflow
 
 Below is a diagram that represents the pseudocodic approach of my Push_swap program. This flowchart illustrates the overall logic and steps involved in processing the inputs and sorting the stack:
 
 
 ![Flowchart](Flowchart_image/Flowchart_pushswap.png)
 
-## Code structure
+### 6. Code structure
 
-## Project Structure
+
 
 ```sh
 pushswap/
@@ -162,9 +162,10 @@ pushswap/
 ├── obj/                      # Object files generated from the source files
 └── Makefile                  # Makefile to compile the project
 ```
-## 7. Stack Operations Explained
 
-### Operation List
+### 7. Stack Operations Explained
+
+#### Operation List
 
 Each stack operation plays a crucial role in the sorting process. Below is a detailed explanation of each operation:
 
@@ -180,9 +181,9 @@ Each stack operation plays a crucial role in the sorting process. Below is a det
 - **rrb (reverse rotate b):** Shifts all elements of stack B down by one position.
 - **rrr (reverse rotate both):** Performs `rra` and `rrb` simultaneously.
 
-## 8. Performance Testing
+### 8. Performance Testing
 
-### Sorting Efficiency
+#### Sorting Efficiency
 
 To ensure your implementation is efficient, run performance tests with various inputs:
 
@@ -191,7 +192,7 @@ To ensure your implementation is efficient, run performance tests with various i
 
 These benchmarks help ensure that your sorting algorithm is optimized and efficient.
 
-## 9. Error Handling
+### 9. Error Handling
 
 Your Push_swap program should handle errors gracefully. Some common errors include:
 
@@ -201,11 +202,11 @@ Your Push_swap program should handle errors gracefully. Some common errors inclu
 
 Handling these errors ensures the robustness of your program.
 
-## 10. Memory Management
+### 10. Memory Management
 
 Memory management is critical in C programming. Your Push_swap program must:
 
-Avoid Memory Leaks: All allocated memory should be freed before the program exits.
+**Avoid Memory Leaks**: All allocated memory should be freed before the program exits.
 
 If there are no leaks it should look like this:
 
@@ -230,9 +231,9 @@ HEAP SUMMARY:
 
 - **Proper Allocation**: Memory should be allocated only when necessary, and freed promptly when no longer needed.
 
-- Tools: You can use tools like **`Valgrind`** to check for memory leaks during testing.
+- **Tools**: You can use tools like **`Valgrind`** to check for memory leaks during testing.
 
-## 12. Evaluation Checklist
+### 11. Evaluation Checklist
 
 During the evaluation of your Push_swap project, an executable called `checker_linux` will be used to verify the correctness of your program. The `checker_linux` executable will check whether the output produced by your program correctly sorts the numbers and stays within the permitted number of operations.
 
@@ -260,7 +261,7 @@ During the evaluation of your Push_swap project, an executable called `checker_l
      ```
      If the numbers are sorted correctly, the `checker_linux` program will return `OK`. If not, it will return `KO`.
 
-### Example Scenario:
+#### Example Scenario:
 
 - **Test Case:**
   - Given the input:
@@ -286,11 +287,11 @@ During the evaluation of your Push_swap project, an executable called `checker_l
     KO
     ```
 
-## 11. Test cases
+### 12. Test cases
 
 Here's a list of all possible error cases for your Push_swap program that users might encounter when running `./push_swap input`:
 
-### Possible Error Cases
+#### Possible Error Cases
 
 1. **Non-Numeric Input:**
    - **Example:** `./push_swap 1 2 three 4`
@@ -341,11 +342,11 @@ Here's a list of all possible error cases for your Push_swap program that users 
     - **Example:** `./push_swap -9223372036854775808`
     - **Expected Behavior:** The program should detect that `-9223372036854775808` is less than `INT_MIN` and display `Error`.
 
-## 13. Push Swap Visualizer Setup on macOS (M1/M2/M3)
+### 13. Push Swap Visualizer Setup on macOS (M1/M2/M3)
 
 This guide will help you set up the Push Swap Visualizer for your Push Swap project on macOS with M1, M2, or M3 chips.
 
-### Prerequisites
+#### Prerequisites
 
 Ensure you have the following tools and dependencies installed on your Mac:
 
@@ -366,7 +367,7 @@ Ensure you have the following tools and dependencies installed on your Mac:
      ```
    - If already installed, you will receive a notification.
 
-### Step 1: Install Required Packages Using Homebrew
+#### Step 1: Install Required Packages Using Homebrew
 
 Use Homebrew to install the following packages:
 
@@ -407,7 +408,7 @@ Use Homebrew to install the following packages:
    clang --version
 
 
-### Step 2: Clone the Push Swap Visualizer Repository
+#### Step 2: Clone the Push Swap Visualizer Repository
 
 Clone the Push Swap Visualizer repository into your Push Swap project directory:
 
@@ -444,7 +445,7 @@ make
 ```
 
 
-### Step 4: Run the Visualizer
+#### Step 4: Run the Visualizer
 
 1. **Navigate to the bin Directory**:
 ```bash
@@ -460,7 +461,7 @@ cd bin
 Use the visualizer’s interface to input data, set paths, and control the sorting visualization.
 
 
-### Troubleshooting
+#### Troubleshooting
 
 - **Deprecation Warnings**: Warnings about deprecated OpenGL functions can be ignored, or silenced by defining `GL_SILENCE_DEPRECATION`.
 
@@ -474,15 +475,9 @@ Use the visualizer’s interface to input data, set paths, and control the sorti
 - **Dependencies Not Found**: Ensure all required packages are correctly installed via Homebrew.
 
 
-### Additional Notes
 
-- Ensure that your `push_swap` program is executable:
-  ```bash
-  chmod +x /path/to/push_swap
 
-- Configure the visualizer's interface to point to your push_swap executable and test with different inputs.
-
-## 14. License
+### 14. License
 
 This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
 
