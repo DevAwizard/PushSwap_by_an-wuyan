@@ -30,7 +30,7 @@
 7. [Performance Testing](#performance-testing)
    - [Sorting Efficiency](#sorting-efficiency)
 8. [Error Handling](#error-handling)
-9. [Memory Management](#memory-management)ju
+9. [Memory Management](#memory-management)
 10. [Evaluation Checklist](#evaluation-checklist)
 11. [Test_cases](#Test-cases)
 12. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
