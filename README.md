@@ -140,8 +140,6 @@ Below is a diagram that represents the pseudocodic approach of my Push_swap prog
 
 ### 6. Code structure
 
-
-
 ```sh
 pushswap/
 ├── srcs/                       # Source files of C code
@@ -181,6 +179,48 @@ pushswap/
 ├── obj/                      # Object files generated from the source files
 └── Makefile                  # Makefile to compile the project
 ```
+
+#### Key files
+
+Here's a brief explanation of each file in your `pushswap` project:
+
+##### `check_arguments/` - Argument Checking Functionality
+- **`single_argument.c`**: Handles the case where the program is provided with a single argument. It ensures the argument is valid and ready for further processing.
+- **`multiple_arguments.c`**: Manages the scenario where multiple arguments are provided. It checks the validity and prepares them for processing.
+- **`edge_cases.c`**: Deals with special or unusual cases in argument handling, such as handling invalid formats or unexpected input.
+
+##### `errors/` - Error Handling Functionality
+- **`ft_error_arguments.c`**: Handles errors related to arguments, such as incorrect input or invalid numbers of arguments.
+- **`ft_error_parsing.c`**: Manages errors that occur during the parsing of arguments, such as when converting strings to integers fails.
+
+##### `parsing_validation/` - Parsing and Validation Functionality
+- **`process_arguments.c`**: Processes and validates the input arguments to ensure they meet the program's requirements before further operations.
+- **`convert_to_int.c`**: Converts input arguments from strings to integers, ensuring they are valid numbers.
+- **`process_multi_argument_helper_functions.c`**: Contains helper functions that assist in processing and validating multiple arguments, breaking down complex tasks into manageable parts.
+
+##### `stacks/` - Stack Operations and Sorting Algorithms
+- **`pushswap.c`**: Implements the main logic for the push-swap operations, which is the core functionality of the program.
+- **`operations/` - Basic Stack Operations**:
+  - **`push.c`**: Implements the push operation, which adds elements to the stack.
+  - **`swap.c`**: Implements the swap operation, which swaps the top two elements of the stack.
+  - **`reverse.c`**: Implements the reverse operation, which reverses the stack's order.
+  - **`rotate.c`**: Implements the rotate operation, which rotates the stack elements up or down.
+
+##### `turk_algorithm/` - Turk Algorithm for Sorting
+- **`find_min_max_value.c`**: Finds the minimum and maximum values in the stack, a crucial step for sorting.
+- **`sorting_small_stack.c`**: Implements sorting logic for small stacks, using optimized techniques suitable for fewer elements.
+- **`utils.c`**: Contains utility functions used by the Turk algorithm, providing support and common functionalities.
+- **`sort_bigger.c`**: Implements sorting logic for larger stacks, managing more complex cases that require more operations.
+- **`set_stacks.c`**: Sets up the initial state of the stacks before the sorting algorithm begins.
+- **`sorting_loop.c`**: Contains the main sorting loop, driving the overall sorting process by iteratively applying the algorithm.
+- **`other_functions.c`**: Includes additional functions that support the sorting process, providing extra capabilities or handling special cases.
+- **`calculate_move_cost.c`**: Calculates the cost of each move, helping the algorithm decide the most efficient sorting path.
+
+##### `free_memory/` - Memory Management
+- **`free_array.c`**: Frees allocated memory for arrays, ensuring there are no memory leaks in the program.
+- **`free_stacks.c`**: Frees allocated memory for stacks, cleaning up resources after they are no longer needed.
+
+
 
 ### 7. Stack Operations Explained
 
