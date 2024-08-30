@@ -1,5 +1,9 @@
 # pushswap_by_an-wuyan
 
+![cover-push_swap](https://github.com/user-attachments/assets/263ded18-813c-4747-8a1b-6ae762b5a101)
+
+
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
