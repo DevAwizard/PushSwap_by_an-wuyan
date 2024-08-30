@@ -170,12 +170,28 @@ Avoid Memory Leaks: All allocated memory should be freed before the program exit
 
 If there are no leaks it should look like this:
 
+**No memory allocation**
+```sh
+HEAP SUMMARY:
+==1925832==     in use at exit: 0 bytes in 0 blocks
+==1925832==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==1925832== 
+==1925832== All heap blocks were freed -- no leaks are possible
+```
 
-Proper Allocation: Memory should be allocated only when necessary, and freed promptly when no longer needed.
-Tools: You can use tools like Valgrind to check for memory leaks during testing.
-Here is a section for your README file that details the evaluation checklist:
+**Using memory allocation**
 
----
+```sh
+==2197287== HEAP SUMMARY:
+==2197287==     in use at exit: 0 bytes in 0 blocks
+==2197287==   total heap usage: 2 allocs, 2 frees, 28 bytes allocated
+==2197287== 
+==2197287== All heap blocks were freed -- no leaks are possible
+```
+
+- **Proper Allocation**: Memory should be allocated only when necessary, and freed promptly when no longer needed.
+
+- Tools: You can use tools like **`Valgrind`** to check for memory leaks during testing.
 
 ## 10. Evaluation Checklist
 
