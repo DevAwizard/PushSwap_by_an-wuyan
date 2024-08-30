@@ -117,7 +117,7 @@ The program supports the following stack operations:
 
 ## 5. My program visual Workflow
 
-Below is a diagram that represents the pseudocodic approach of the Push_swap program. This flowchart illustrates the overall logic and steps involved in processing the inputs and sorting the stack:
+Below is a diagram that represents the pseudocodic approach of my Push_swap program. This flowchart illustrates the overall logic and steps involved in processing the inputs and sorting the stack:
 
 
 ![Flowchart](Flowchart_image/Flowchart_pushswap.png)
