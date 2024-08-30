@@ -1,7 +1,6 @@
-# pushswap_by_an-wuyan
-
 ![cover-push_swap](https://github.com/user-attachments/assets/263ded18-813c-4747-8a1b-6ae762b5a101)
 
+Push swap documentation
 
 
 ## Table of Contents
@@ -30,7 +29,6 @@
 12. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
 13. [License](#license)
 
----
 
 ## 1. Introduction
 
