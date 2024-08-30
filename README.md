@@ -1,8 +1,8 @@
 # pushswap_by_an-wuyan
 
 
+![Uploading Flowchart_pushswap.png…]()
 
-<img width="780" alt="Flowchart_pushswap" src="https://github.com/user-attachments/assets/7d36d4f7-e143-41b6-8066-6f20372cc1ed">
 
 
 
