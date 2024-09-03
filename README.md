@@ -16,41 +16,31 @@
 
 2. [Objectives](#objectives)
 
-3. [Setup and Installation](#setup-and-installation)
-
-   - [Cloning the Repository](#cloning-the-repository)
-
-   - [Compiling the Program](#compiling-the-program)
-
-4. [Usage](#usage)
+3. [Usage](#usage)
 
    - [Example Usage](#example-usage)
 
-   - [Supported Operations](#supported-operations)
+4. [Stack Operations Explained](#stack-operations-explained)
 
 5. [Program Workflow](#program-workflow)
 
 6. [Code structure](#code-structure)
 
-7. [Stack Operations Explained](#stack-operations-explained)
-
-   - [Operation List](#operation-list)
-
-8. [Performance Testing](#performance-testing)
+7. [Performance Testing](#performance-testing)
 
    - [Sorting Efficiency](#sorting-efficiency)
 
-9. [Error Handling](#error-handling)
+8. [Error Handling](#error-handling)
 
-10. [Memory Management](#memory-management)
+9. [Memory Management](#memory-management)
 
-11. [Evaluation Checklist](#evaluation-checklist)
+10. [Evaluation Checklist](#evaluation-checklist)
 
-12. [Test_cases](#Test-cases)
+11. [Test_cases](#Test-cases)
 
-13. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
+12. [Push Swap Visualizer Setup on macOS (M1/M2/M3)](#push-swap-visualizer-setup-on-macos-m1m2m3)
 
-14. [License](#license)
+13. [License](#license)
 
 
 ### 1. Introduction
@@ -69,28 +59,7 @@ The main objectives of this project are:
 - **Error Handling:** Create a robust program that gracefully handles all edge cases and errors, such as invalid input or memory issues.
 - **Understanding Complexity:** Gain a solid understanding of algorithmic complexity, particularly with sorting operations.
 
-### 3. Setup and Installation
-
-#### Cloning the Repository
-
-To start using the Push_swap project, first clone the repository from GitHub:
-
-```bash
-git clone https://github.com/yourusername/push_swap.git
-```
-
-#### Compiling the Program
-
-After cloning the repository, navigate to the project directory and compile the program using the provided Makefile:
-
-```bash
-cd push_swap
-make
-```
-
-This will generate the `push_swap` executable, ready for use.
-
-### 4. Usage
+### 3. Usage
 
 The Push_swap program takes a series of integers as arguments and returns the sequence of operations required to sort them.
 
@@ -115,21 +84,23 @@ pa
 pa
 ```
 
-### Supported Operations
+### 4. Stack Operations Explained
 
-The program supports the following stack operations:
+#### Operation List
 
-- **sa:** Swap the first two elements at the top of stack A.
-- **sb:** Swap the first two elements at the top of stack B.
-- **ss:** Swap the first two elements of both stacks A and B simultaneously.
-- **pa:** Push the top element from stack B to stack A.
-- **pb:** Push the top element from stack A to stack B.
-- **ra:** Rotate all elements of stack A up by one. The first element becomes the last one.
-- **rb:** Rotate all elements of stack B up by one. The first element becomes the last one.
-- **rr:** Perform `ra` and `rb` simultaneously.
-- **rra:** Reverse rotate all elements of stack A. The last element becomes the first one.
-- **rrb:** Reverse rotate all elements of stack B. The last element becomes the first one.
-- **rrr:** Perform `rra` and `rrb` simultaneously.
+Each stack operation plays a crucial role in the sorting process. Below is a detailed explanation of each operation:
+
+- **sa (swap a):** Swaps the top two elements of stack A.
+- **sb (swap b):** Swaps the top two elements of stack B.
+- **ss (swap both):** Swaps the top two elements of both stacks A and B.
+- **pa (push a):** Pushes the top element from stack B to stack A.
+- **pb (push b):** Pushes the top element from stack A to stack B.
+- **ra (rotate a):** Shifts all elements of stack A up by one position.
+- **rb (rotate b):** Shifts all elements of stack B up by one position.
+- **rr (rotate both):** Performs `ra` and `rb` simultaneously.
+- **rra (reverse rotate a):** Shifts all elements of stack A down by one position.
+- **rrb (reverse rotate b):** Shifts all elements of stack B down by one position.
+- **rrr (reverse rotate both):** Performs `rra` and `rrb` simultaneously.
 
 ### 5. My program visual Workflow
 
@@ -220,27 +191,7 @@ Here's a brief explanation of each file in your `pushswap` project:
 - **`free_array.c`**: Frees allocated memory for arrays, ensuring there are no memory leaks in the program.
 - **`free_stacks.c`**: Frees allocated memory for stacks, cleaning up resources after they are no longer needed.
 
-
-
-### 7. Stack Operations Explained
-
-#### Operation List
-
-Each stack operation plays a crucial role in the sorting process. Below is a detailed explanation of each operation:
-
-- **sa (swap a):** Swaps the top two elements of stack A.
-- **sb (swap b):** Swaps the top two elements of stack B.
-- **ss (swap both):** Swaps the top two elements of both stacks A and B.
-- **pa (push a):** Pushes the top element from stack B to stack A.
-- **pb (push b):** Pushes the top element from stack A to stack B.
-- **ra (rotate a):** Shifts all elements of stack A up by one position.
-- **rb (rotate b):** Shifts all elements of stack B up by one position.
-- **rr (rotate both):** Performs `ra` and `rb` simultaneously.
-- **rra (reverse rotate a):** Shifts all elements of stack A down by one position.
-- **rrb (reverse rotate b):** Shifts all elements of stack B down by one position.
-- **rrr (reverse rotate both):** Performs `rra` and `rrb` simultaneously.
-
-### 8. Performance Testing
+### 7. Performance Testing
 
 #### Sorting Efficiency
 
@@ -251,7 +202,7 @@ To ensure your implementation is efficient, run performance tests with various i
 
 These benchmarks help ensure that your sorting algorithm is optimized and efficient.
 
-### 9. Error Handling
+### 8. Error Handling
 
 Your Push_swap program should handle errors gracefully. Some common errors include:
 
@@ -261,7 +212,7 @@ Your Push_swap program should handle errors gracefully. Some common errors inclu
 
 Handling these errors ensures the robustness of your program.
 
-### 10. Memory Management
+### 9. Memory Management
 
 Memory management is critical in C programming. Your Push_swap program must:
 
@@ -292,7 +243,7 @@ HEAP SUMMARY:
 
 - **Tools**: You can use tools like **`Valgrind`** to check for memory leaks during testing.
 
-### 11. Evaluation Checklist
+### 10. Evaluation Checklist
 
 During the evaluation of your Push_swap project, an executable called `checker_linux` will be used to verify the correctness of your program. The `checker_linux` executable will check whether the output produced by your program correctly sorts the numbers and stays within the permitted number of operations.
 
@@ -346,7 +297,7 @@ During the evaluation of your Push_swap project, an executable called `checker_l
     KO
     ```
 
-### 12. Test cases
+### 11. Test cases
 
 Here's a list of all possible error cases for your Push_swap program that users might encounter when running `./push_swap input`:
 
@@ -401,7 +352,7 @@ Here's a list of all possible error cases for your Push_swap program that users 
     - **Example:** `./push_swap -9223372036854775808`
     - **Expected Behavior:** The program should detect that `-9223372036854775808` is less than `INT_MIN` and display `Error`.
 
-### 13. Push Swap Visualizer Setup on macOS (M1/M2/M3)
+### 12. Push Swap Visualizer Setup on macOS (M1/M2/M3)
 
 This guide will help you set up the Push Swap Visualizer for your Push Swap project on macOS with M1, M2, or M3 chips.
 
@@ -534,9 +485,7 @@ Use the visualizer’s interface to input data, set paths, and control the sorti
 - **Dependencies Not Found**: Ensure all required packages are correctly installed via Homebrew.
 
 
-
-
-### 14. License
+### 13. License
 
 This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
 
